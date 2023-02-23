@@ -103,6 +103,18 @@ app_license = "MIT"
 #	}
 # }
 
+doc_events = {
+	"Employee": {
+		"validate": "erpnext_custom.erpnext_custom.doc_events.attendance_event.validate_create_task",
+	},
+	"Event":{
+		"validate": "erpnext_custom.erpnext_custom.doc_events.attendance_event.validate_show_task_in_calender",
+	},
+	"Attendance":{
+		"validate": "erpnext_custom.erpnext_custom.doc_events.attendance_event.calculate_hours",
+	},
+ }
+
 # Scheduled Tasks
 # ---------------
 
